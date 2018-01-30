@@ -23,8 +23,12 @@
         %br
         %a{href: @github_link}=@github_link
       %ul.list-unstyled
-        %li Version: v2.0.0
-        %li Last Updated: 30th Jan 2018
+        %li Version: v2.1.0
+        %li Last Updated: 16th Nov 2018
   .row
     .col-lg-12
       #time_zone.jumbotron
+        = render :partial => 'time_area'
+      #button_area
+        = form_tag update_time_path, method: :post, remote: true do
+          = submit_tag 'Get Current Time', class: "btn btn-primary"

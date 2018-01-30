@@ -6,13 +6,14 @@ git_source(:github) do |repo_name|
 end
 
 
-ruby "2.4.3"
+ruby "2.5.1"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'rails', '~> 5.2'
+# Use pg as the database for Active Record
+gem 'pg', '~> 0.21.0'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -40,7 +41,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'hamlit'
 gem 'simple_form'
 gem 'jquery-rails'
-gem 'bootstrap', '~> 4.0.0.beta2.1'
+gem "bootstrap", ">= 4.1.2"
+gem 'local_time'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -58,7 +60,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
-  
+
   gem "better_errors"
   gem "binding_of_caller"
 end

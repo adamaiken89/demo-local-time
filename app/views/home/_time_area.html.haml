@@ -1,0 +1,17 @@
+%table{style:"width:100%"}
+  %tr
+    %th{colspan: 2} Current Time
+  %tr
+    %td Local Time: 
+    %td #{local_time(@current_time, @date_format)}
+  %tr
+    %td System Time: 
+    %td #{time_parser(@current_time)}
+  %tr
+    %th{colspan: 2} One Hour  Ago
+  %tr
+    %td Local Time Ago: 
+    %td #{local_time_ago(1.hour.ago, @date_format)}
+  %tr
+    %td System Time: 
+    %td #{time_parser(1.hour.ago)}
